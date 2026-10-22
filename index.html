@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz interativo de conhecimentos gerais com pontuação.">
+    <title>Quiz Interativo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Quiz Interativo</h1>
+        <p>Teste seus conhecimentos e descubra sua pontuação!</p>
+    </header>
+
+    <main>
+        <section class="quiz-container" aria-labelledby="titulo-quiz">
+            <article>
+                <h2 id="titulo-quiz">Desafio de Conhecimentos Gerais</h2>
+                <p id="progresso">Pergunta 1 de 10</p>
+
+                <div class="barra-progresso"
+                     role="progressbar"
+                     aria-label="Progresso do quiz"
+                     aria-valuemin="0"
+                     aria-valuemax="10"
+                     aria-valuenow="0"
+                     id="barra">
+                    <div id="preenchimento"></div>
+                </div>
+
+                <form id="form-quiz">
+                    <fieldset id="grupo-respostas">
+                        <legend id="pergunta">Carregando pergunta...</legend>
+                        <div id="alternativas"></div>
+                    </fieldset>
+
+                    <p id="feedback" role="status" aria-live="polite"></p>
+
+                    <div class="informacoes">
+                        <p>Pontuação: <strong id="pontuacao">0</strong></p>
+                        <p>Acertos: <strong id="acertos">0</strong></p>
+                    </div>
+
+                    <div class="botoes">
+                        <button type="submit" id="btn-responder">
+                            Responder
+                        </button>
+                        <button type="button" id="btn-proximo" hidden>
+                            Próxima pergunta
+                        </button>
+                    </div>
+                </form>
+
+                <section id="resultado" aria-live="polite" hidden>
+                    <h3>Quiz finalizado!</h3>
+                    <p id="mensagem-final"></p>
+                    <p id="resultado-final"></p>
+                    <button type="button" id="btn-reiniciar">
+                        Reiniciar quiz
+                    </button>
+                </section>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Quiz Interativo — Projeto desenvolvido com HTML, CSS e JavaScript.</p>
+    </footer>
+</body>
+</html>
